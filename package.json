@@ -1,0 +1,12 @@
+{
+  "name": "angular-require",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokachild/angular-require.git"
+  }
+}

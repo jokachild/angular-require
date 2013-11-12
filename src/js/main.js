@@ -4,12 +4,12 @@
 
 requirejs.config({
 
-    baseUrl: "js",
+    baseUrl: "./js",
 
     paths: {
         angular: "lib/angular",
         ngRoute: "lib/angular-route",
-        app: "app"
+        almond: "lib/almond"
     },
 
     shim: {
@@ -20,8 +20,8 @@ requirejs.config({
             deps: ["angular"],
             exports: "ngRoute"
         }
-    },
-
-    deps: ["app/bootstrap"]
+    }
 
 });
+
+require(["app/bootstrap"]);
