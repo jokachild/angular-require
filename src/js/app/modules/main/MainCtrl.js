@@ -3,14 +3,12 @@
  */
 
 define([
-    "./module"
+    "./module",
+    "./MainLocalService"
 ], function (module) {
 
-    module.controller("MainCtrl", function ($scope, config) {
-        $scope.features = [
-            {name: "AngularJS"},
-            {name: "RequireJS"}
-        ];
+    module.controller("MainCtrl", function ($scope, config, MainLocalService) {
+        $scope.features = MainLocalService.getFeatures();
         $scope.version = config.version;
     });
 

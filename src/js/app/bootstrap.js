@@ -5,6 +5,7 @@
 define([
     "angular",
     "./app",
+    "./common/services/CommonService",
     "./routes"
 ], function (angular, app) {
 

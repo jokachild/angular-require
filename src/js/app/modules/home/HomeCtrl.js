@@ -6,11 +6,8 @@ define([
     "./module"
 ], function (module) {
 
-    module.controller("HomeCtrl", function ($scope, config) {
-        $scope.features = [
-            {name: "AngularJS"},
-            {name: "RequireJS"}
-        ];
+    module.controller("HomeCtrl", function ($scope, config, CommonService) {
+        $scope.features = CommonService.features;
         $scope.version = config.version;
     });
 
