@@ -1,8 +1,4 @@
 <h3>AngularJS + RequireJS (main)</h3>
-<ul>
-    <li ng-repeat="feature in features">
-        {{feature.name}}
-    </li>
-</ul>
+<features fs="features"></features>
 <hr/>
 <div>Version: {{version}}</div>

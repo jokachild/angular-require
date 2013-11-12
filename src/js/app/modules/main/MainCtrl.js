@@ -4,7 +4,8 @@
 
 define([
     "./module",
-    "./MainLocalService"
+    "./MainLocalService",
+    "./FeaturesDirective"
 ], function (module) {
 
     module.controller("MainCtrl", function ($scope, config, MainLocalService) {
