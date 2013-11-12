@@ -6,6 +6,10 @@ module.exports = function (grunt) {
         requirejs: {
             compile: {
                 options: {
+                    uglify2: {
+                        mangle: false
+                    },
+                    optimize: "uglify2",
                     baseUrl: "src/js",
                     mainConfigFile: "src/js/main.js",
                     name: "lib/almond",
