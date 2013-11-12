@@ -6,13 +6,15 @@ define([
     "angular",
     "ngRoute",
     "./config",
-    "./modules/home/index"
+    "./modules/home/index",
+    "./modules/main/index"
 ], function (angular) {
 
     return angular.module("app", [
         "ngRoute",
         "app.constants",
-        "app.home"
+        "app.home",
+        "app.main"
     ], null);
 
 });

@@ -13,6 +13,11 @@ define([
             controller: "HomeCtrl"
         });
 
+        $routeProvider.when("/main", {
+            templateUrl: "js/app/modules/main/main.tpl",
+            controller: "MainCtrl"
+        });
+
         $routeProvider.otherwise({
             redirectTo: "/home"
         });
