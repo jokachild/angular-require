@@ -8,16 +8,6 @@ define([
 
     app.config(function ($routeProvider) {
 
-        $routeProvider.when("/home", {
-            templateUrl: "js/app/modules/home/home.tpl",
-            controller: "HomeCtrl"
-        });
-
-        $routeProvider.when("/main", {
-            templateUrl: "js/app/modules/main/main.tpl",
-            controller: "MainCtrl"
-        });
-
         $routeProvider.otherwise({
             redirectTo: "/home"
         });

@@ -3,9 +3,15 @@
  */
 
 define([
-    "angular"
-], function (angular) {
+    "angular",
+    "text!./home.tpl"
+], function (angular, homeTpl) {
 
-    return angular.module("app.home", [], null);
-
+    return angular.module("app.home", [], null)
+        .config(function ($routeProvider) {
+            $routeProvider.when("/home", {
+                template: homeTpl,
+                controller: "HomeCtrl"
+            });
+        });
 });

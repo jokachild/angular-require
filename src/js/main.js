@@ -9,7 +9,8 @@ requirejs.config({
     paths: {
         angular: "lib/angular",
         ngRoute: "lib/angular-route",
-        almond: "lib/almond"
+        almond: "lib/almond",
+        text: "lib/text"
     },
 
     shim: {

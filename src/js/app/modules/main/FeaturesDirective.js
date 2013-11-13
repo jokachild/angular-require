@@ -3,8 +3,9 @@
  */
 
 define([
-    "./module"
-], function (module) {
+    "./module",
+    "text!./FeaturesDirective.tpl"
+], function (module, tpl) {
 
     module.directive("features", function () {
         return {
@@ -12,7 +13,7 @@ define([
             scope: {
                 features: "=fs"
             },
-            templateUrl: "js/app/modules/main/FeaturesDirective.tpl",
+            template: tpl,
             link: function (scope, element, attrs) {
                 //
             }
