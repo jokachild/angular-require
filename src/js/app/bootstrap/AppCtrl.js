@@ -10,6 +10,18 @@ define([
         $scope.app = {
             version: config.version
         };
+
+        $scope.observable = "default";
+        $scope.observer = "";
+
+        $scope.$watch("observable", function (value) {
+            $scope.observer = value + " intercepted";
+        });
+
+        // Added for testing
+        $scope.retrieveSomeResource = function () {
+            return config.someAsyncCall($scope.observable);
+        };
     });
 
 });

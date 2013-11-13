@@ -4,7 +4,7 @@
 
 define(["app/common/services/CommonService"], function () {
 
-    describe("CommonService", function () {
+    describe("Unit: CommonService", function () {
         var _CommonService;
 
         beforeEach(function () {
