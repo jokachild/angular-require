@@ -9,6 +9,7 @@ requirejs.config({
     paths: {
         angular: "lib/angular",
         ngRoute: "lib/angular-route",
+        ngMocks: "lib/angular-mocks",
         almond: "lib/almond",
         text: "lib/text"
     },
@@ -20,6 +21,10 @@ requirejs.config({
         ngRoute: {
             deps: ["angular"],
             exports: "ngRoute"
+        },
+        ngMocks: {
+            deps: ["angular"],
+            exports: "ngMocks"
         }
     }
 

@@ -5,6 +5,7 @@
 define([
     "angular",
     "ngRoute",
+    "ngMocks",
     "./config",
     "./bootstrap/index",
     "./modules/home/index",
