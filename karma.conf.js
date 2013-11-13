@@ -30,7 +30,18 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ["progress", "coverage"],
+
+
+    preprocessors: {
+      "src/js/app/**/*.js": ["coverage"]
+    },
+
+
+    coverageReporter: {
+      type: "html",
+      dir: "test/coverage"
+    },
 
 
     // web server port
