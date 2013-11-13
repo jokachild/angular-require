@@ -6,9 +6,8 @@ define([
     "./module"
 ], function (module) {
 
-    module.controller("HomeCtrl", function ($scope, config, CommonService) {
+    module.controller("HomeCtrl", function ($scope, CommonService) {
         $scope.features = CommonService.features;
-        $scope.version = config.version;
     });
 
 });

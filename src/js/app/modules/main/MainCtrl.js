@@ -8,9 +8,8 @@ define([
     "./FeaturesDirective"
 ], function (module) {
 
-    module.controller("MainCtrl", function ($scope, config, MainLocalService) {
+    module.controller("MainCtrl", function ($scope, MainLocalService) {
         $scope.features = MainLocalService.getFeatures();
-        $scope.version = config.version;
     });
 
 });

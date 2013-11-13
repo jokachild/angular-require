@@ -5,10 +5,12 @@
 define([
     "angular",
     "./app",
+    "text!./bootstrap/layout.tpl",
     "./common/services/CommonService",
     "./routes"
-], function (angular, app) {
+], function (angular, app, layout) {
 
+    angular.element(document.body).html(layout);
     angular.bootstrap(document, [app.name]);
 
 });
