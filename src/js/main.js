@@ -8,6 +8,7 @@ requirejs.config({
 
     paths: {
         angular: "lib/angular",
+        ngResource: "lib/angular-resource",
         ngRoute: "lib/angular-route",
         ngMocks: "lib/angular-mocks",
         almond: "lib/almond",
@@ -17,6 +18,10 @@ requirejs.config({
     shim: {
         angular: {
             exports: "angular"
+        },
+        ngResource: {
+            deps: ["angular"],
+            exports: "ngResource"
         },
         ngRoute: {
             deps: ["angular"],

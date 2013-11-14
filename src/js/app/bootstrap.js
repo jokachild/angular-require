@@ -7,6 +7,7 @@ define([
     "./app",
     "text!./bootstrap/layout.tpl",
     "./common/services/CommonService",
+    "./common/services/FeaturesService",
     "./routes"
 ], function (angular, app, layout) {
 

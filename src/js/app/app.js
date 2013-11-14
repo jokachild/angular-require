@@ -4,6 +4,7 @@
 
 define([
     "angular",
+    "ngResource",
     "ngRoute",
     "ngMocks",
     "./config",
@@ -13,6 +14,7 @@ define([
 ], function (angular) {
 
     return angular.module("app", [
+        "ngResource",
         "ngRoute",
         "app.constants",
         "app.bootstrap",
