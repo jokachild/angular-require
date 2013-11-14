@@ -3,13 +3,13 @@
  */
 
 define([
-    "./module",
-    "./MainLocalService",
-    "./FeaturesDirective"
+    "./module"
 ], function (module) {
 
-    module.controller("MainCtrl", function ($scope, MainLocalService) {
-        $scope.features = MainLocalService.getFeatures();
+    module.controller("MainCtrl", function ($scope, MultipleCallsService) {
+        MultipleCallsService.getAllInOne().then(function (data) {
+            $scope.features = data.features;
+        });
     });
 
 });

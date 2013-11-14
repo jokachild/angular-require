@@ -6,29 +6,40 @@ define(["app/modules/main/MainCtrl"], function () {
 
     describe("Unit: MainCtrl", function () {
         var $scope = null,
-            ctrl = null;
-
-        var mockService = {
-            getFeatures: function (x) {
-                return [
-                    {name: "AngularJS"},
-                    {name: "RequireJS"}
-                ];
-            }
-        };
+            ctrl = null,
+            mockService,
+            d;
 
         beforeEach(function () {
             module("app");
-            inject(function ($rootScope, $controller) {
+            inject(function ($rootScope, $controller, $q) {
+                d = $q.defer();
+                mockService = {
+                    getAllInOne: function () {
+                        return d.promise;
+                    }
+                };
+
                 $scope = $rootScope.$new();
                 ctrl = $controller("MainCtrl", {
                     $scope: $scope,
-                    MainLocalService: mockService
+                    MultipleCallsService: mockService
                 });
             });
         });
 
         it("should have features", function () {
+            d.resolve({
+                features: [
+                    {"name": "AngularJS (resource)"},
+                    {"name": "RequireJS (resource)"}
+                ],
+                version: [
+                    {"name": "V1"},
+                    {"name": "V2"}
+                ]
+            });
+            $scope.$digest();
             expect($scope.features).not.toBeUndefined();
             expect($scope.features).not.toBeNull();
             expect($scope.features.length).toEqual(2);

@@ -3,5 +3,8 @@
  */
 
 define([
-    "./MainCtrl"
+    "./module",
+    "./MainCtrl",
+    "./MainLocalService",
+    "./FeaturesDirective"
 ], function () {});
