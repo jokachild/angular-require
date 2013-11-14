@@ -8,6 +8,7 @@ define([
     "text!./bootstrap/layout.tpl",
     "./common/services/CommonService",
     "./common/services/FeaturesService",
+    "./common/services/HttpBasedService",
     "./routes"
 ], function (angular, app, layout) {
 
