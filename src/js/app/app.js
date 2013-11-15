@@ -8,6 +8,7 @@ define([
     "ngRoute",
     "ngMocks",
     "./config",
+    "./services/index",
     "./bootstrap/index",
     "./modules/home/index",
     "./modules/main/index"
@@ -17,6 +18,7 @@ define([
         "ngResource",
         "ngRoute",
         "app.constants",
+        "app.services",
         "app.bootstrap",
         "app.home",
         "app.main"

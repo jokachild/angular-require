@@ -3,10 +3,10 @@
  */
 
 define([
-    "../../app"
-], function (app) {
+    "./module"
+], function (module) {
 
-    app.service("FeaturesService", function ($resource, $q) {
+    module.service("FeaturesService", function ($resource, $q) {
         var Features = $resource("js/app/mocks/features.json", {}, {
             getFeatures: {
                 method: "GET",

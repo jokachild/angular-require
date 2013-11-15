@@ -3,10 +3,10 @@
  */
 
 define([
-    "../../app"
-], function (app) {
+    "./module"
+], function (module) {
 
-    app.service("CommonService", function () {
+    module.service("CommonService", function () {
         this.features = [
             {name: "AngularJS (common)"},
             {name: "RequireJS (common)"}

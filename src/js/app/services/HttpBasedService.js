@@ -3,10 +3,10 @@
  */
 
 define([
-    "../../app"
-], function (app) {
+    "./module"
+], function (module) {
 
-    app.factory("HttpBasedService", function ($http) {
+    module.factory("HttpBasedService", function ($http) {
         return {
             sendMessage: function (msg) {
                 return $http.get("js/app/mocks/features.json?msg=" + msg)

@@ -3,10 +3,10 @@
  */
 
 define([
-    "../../app"
-], function (app) {
+    "./module"
+], function (module) {
 
-    app.factory("ResourceFactory", function ($http) {
+    module.factory("ResourceFactory", function ($http) {
         var url;
 
         var Resource = function (data) {

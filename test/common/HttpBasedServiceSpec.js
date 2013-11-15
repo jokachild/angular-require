@@ -2,13 +2,13 @@
  * Created by amyroniuk on 11/13/13.
  */
 
-define(["app/common/services/HttpBasedService"], function () {
+define(["app/services/HttpBasedService"], function () {
 
     describe("Unit: HttpBasedService", function () {
         var svc, httpBackend;
 
         beforeEach(function () {
-            module("app");
+            module("app.services");
             inject(function ($httpBackend, HttpBasedService) {
                 svc = HttpBasedService;
                 httpBackend = $httpBackend;

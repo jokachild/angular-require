@@ -3,10 +3,10 @@
  */
 
 define([
-    "../../app"
-], function (app) {
+    "./module"
+], function (module) {
 
-    app.service("MultipleCallsService", function ($http, $q) {
+    module.service("MultipleCallsService", function ($http, $q) {
 
         this.getAll = function () {
             var deferred = $q.defer();

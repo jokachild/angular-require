@@ -2,13 +2,13 @@
  * Created by amyroniuk on 11/13/13.
  */
 
-define(["app/common/services/CommonService"], function () {
+define(["app/services/CommonService"], function () {
 
     describe("Unit: CommonService", function () {
         var _CommonService;
 
         beforeEach(function () {
-            module("app");
+            module("app.services");
             inject(function (CommonService) {
                 _CommonService = CommonService;
             });
