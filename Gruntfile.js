@@ -17,11 +17,30 @@ module.exports = function (grunt) {
                     out: "dist/app.js"
                 }
             }
+        },
+
+        compass: {
+            compile: {
+                options: {
+                    sassDir: "src/scss",
+                    cssDir: "src/css",
+                    noLineComments: true
+                }
+            }
+        },
+
+        watch: {
+            compass: {
+                files: ["src/scss/**/*.scss"],
+                tasks: ["compass"]
+            }
         }
 
     });
 
     grunt.loadNpmTasks("grunt-contrib-requirejs");
+    grunt.loadNpmTasks("grunt-contrib-compass");
+    grunt.loadNpmTasks("grunt-contrib-watch");
 
     grunt.registerTask("default", ["requirejs"]);
 
