@@ -10,6 +10,8 @@ define([
     "./common/services/FeaturesService",
     "./common/services/HttpBasedService",
     "./common/services/MultipleCallsService",
+    "./common/services/ResourceFactory",
+    "./common/services/FeaturesResource",
     "./routes"
 ], function (angular, app, layout) {
 

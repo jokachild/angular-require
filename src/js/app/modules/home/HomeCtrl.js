@@ -6,7 +6,7 @@ define([
     "./module"
 ], function (module) {
 
-    module.controller("HomeCtrl", function ($scope, FeaturesService) {
+    module.controller("HomeCtrl", function ($scope, FeaturesService/*, FeaturesResource*/) {
 
         /*$scope.analyzeFeatures = function (features) {
            angular.forEach(features, function (value, key) {
@@ -22,6 +22,27 @@ define([
         /*FeaturesService.getFeatures(function (features) {
             $scope.features = features;
             $scope.analyzeFeatures($scope.features);
+        });*/
+
+        /*FeaturesResource.query().then(function (data) {
+            $scope.f = data;
+        });
+
+        var model = {
+            name: "Backbone"
+        };
+
+        FeaturesResource.save(model).then(function (data) {
+            debugger;
+        }, function (data) {
+            debugger;
+        });
+
+        var feature = new FeaturesResource(model);
+        feature.$save().then(function (data) {
+            debugger;
+        }, function (data) {
+            debugger;
         });*/
     });
 
