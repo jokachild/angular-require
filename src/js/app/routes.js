@@ -20,6 +20,58 @@ define([
 
     });
 
+    app.config(function ($provide) {
+
+        $provide.constant("DB", "postgres");
+
+        $provide.value("SomeAction", function () {
+            console.log("some action..");
+        });
+
+        $provide.decorator("SomeAction", ["$delegate", function ($delegate) {
+            var f = $delegate;
+            $delegate = function () {
+                console.log("before some action..");
+                f();
+                console.log("after some action..");
+            };
+            return $delegate;
+        }]);
+
+        $provide.service("SomeService", function () {
+            this.simeAttr = "someVal";
+        });
+
+        $provide.factory("SomeFactory", function () {
+            return {
+                someAttr: "someAttrVal",
+                gerSomeAttr: function () {
+                    return this.someAttr;
+                }
+            };
+        });
+
+        $provide.provider("SomePr", function () {
+            var someConfigVal = "init";
+            return {
+                setSomeConfigVal: function () {
+                    someConfigVal = "default";
+                },
+                $get: function () {
+                    return {
+                        getSomeConfigVal: function () {
+                            return someConfigVal;
+                        }
+                    };
+                }
+            };
+        });
+    });
+
+    app.config(function (SomePrProvider) {
+        SomePrProvider.setSomeConfigVal();
+    });
+
     app.factory("retryInterceptor", function ($injector, $q) {
 
         return function (responsePromise) {

@@ -3,5 +3,6 @@
  */
 
 define([
+    "./module",
     "./HomeCtrl"
 ], function () {});
