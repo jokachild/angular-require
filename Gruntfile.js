@@ -38,9 +38,10 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.loadNpmTasks("grunt-contrib-requirejs");
-    grunt.loadNpmTasks("grunt-contrib-compass");
-    grunt.loadNpmTasks("grunt-contrib-watch");
+    require("load-grunt-tasks")(grunt);
+    //grunt.loadNpmTasks("grunt-contrib-requirejs");
+    //grunt.loadNpmTasks("grunt-contrib-compass");
+    //grunt.loadNpmTasks("grunt-contrib-watch");
 
     grunt.registerTask("default", ["requirejs"]);
 
